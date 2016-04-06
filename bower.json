@@ -1,0 +1,21 @@
+{
+  "name": "vue",
+  "homepage": "https://github.com/vuejs-xx/vuejs",
+  "authors": [
+    "edwin <sblig@126.om>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qiniu": "~1.0.14-beta"
+  }
+}
