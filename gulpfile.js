@@ -1,31 +1,27 @@
 var gulp = require('gulp');
 var contentIncluder = require('gulp-content-includer');
 
-gulp.task('lean1',function() {
-    gulp.src("lean1/*.html")
+gulp.task('lean',function() {
+    gulp.src("lean?/*")
         .pipe(contentIncluder({
             includerReg:/<!\-\-include\s+"([^"]+)"\-\->/g
         }))
-        .pipe(gulp.dest('dist/lean1'));
+        .pipe(gulp.dest('dist'));
 
     gulp.src("js/*.js")
-        .pipe(gulp.dest('dist/lean1'));
+        .pipe(gulp.dest('dist'));
 });
-
-
-
-gulp.task('default', function(){
-    gulp.start('lean1');
-});
-
 
 // 监听任务 运行语句 gulp watch
 gulp.task('watch', function () {
-    server.listen(port, function (err) {
-        if (err) {
-            return console.log(err);
-        }
-
-    });
+    gulp.watch('lean?/**/*', ['lean']);
+    gulp.watch('js/*', ['lean']);
 });
+
+
+gulp.task('default', function(){
+    gulp.start('watch');
+});
+
+
 
