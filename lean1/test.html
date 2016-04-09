@@ -4,26 +4,11 @@
 	<title></title>
 	<meta charset="utf-8">
 	<!--include "../common/head/publicjs.html"-->
+	<!--include "../js/wilddogio.html"-->
 </head>
 <body>
 
 
-<script type="text/javascript">
-	var ref = new Wilddog("https://sblig.wilddogio.com/");
-	ref.set({
-		"name" : "Jack Bauer",
-		"age" : 32,
-		"location" : {
-			"city" : "beijing",
-			"zip" : 100000
-		}
-	});
-
-	ref.child("location/city").on("value", function(datasnapshot) {
-		console.log(datasnapshot.val());   // 结果会在 console 中打印出 "beijing"
-	});
-
-</script>
 
 
 
